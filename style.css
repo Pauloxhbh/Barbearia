@@ -172,13 +172,21 @@ footer {
   margin-top: 40px;
 }
 
+/* Correção para deixar a imagem de perfil circular */
 .about-image img {
   width: 100%;
-  height: auto;
-  border: 3px solid #ffcc00;
-  border-radius: 50%; /* <-- A MÁGICA ACONTECE AQUI */
-  object-fit: cover;     /* Garante que a imagem preencha o círculo sem distorcer */
-  aspect-ratio: 1 / 1;   /* Força a imagem a ser um quadrado perfeito para o círculo */
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
+}
+
+/* E adicione este NOVO seletor para o container da imagem */
+.about-image {
+  width: 250px; /* Tamanho do círculo */
+  height: 250px; /* Tamanho do círculo */
+  border-radius: 50%; /* A mágica do círculo acontece aqui */
+  border: 4px solid #ffcc00;
+  overflow: hidden; /* Esconde as partes da imagem que saem do círculo */
+  margin: 0 auto 20px auto; /* Centraliza o círculo */
 }
 
 .about-text h3 {
