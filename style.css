@@ -1,0 +1,196 @@
+/* --- Estilos Base (Seu código original, com pequenas melhorias) --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  color: #f0f0f0; /* Cor um pouco mais suave que o branco puro */
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /* Centraliza o conteúdo principal */
+  padding: 20px;
+}
+
+header {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #ffcc00; /* Detalhe na borda */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #ffcc00;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Efeito suave na transição de cor */
+}
+
+/* Efeito ao passar o mouse e link da página ativa */
+nav a:hover, nav a.active {
+  color: #ffcc00;
+}
+
+section h2 {
+  color: #ffcc00;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 3px solid #ffcc00;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000; /* Garante que fique por cima de tudo */
+  transition: background 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #20b954;
+}
+
+/* --- NOVOS ESTILOS - PÁGINA INICIAL --- */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1200x600.png?text=IMAGEM+DA+SUA+BARBEARIA'); /* IMAGEM DE EXEMPLO */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #ffcc00;
+  color: #111;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+}
+
+/* --- NOVOS ESTILOS - PÁGINA DE SERVIÇOS --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Layout responsivo */
+  gap: 30px;
+  text-align: left;
+}
+
+.service-card {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Efeito de levantar o card */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.service-card h3 {
+  color: #ffcc00;
+  margin-top: 0;
+  border-bottom: 1px solid #ffcc00;
+  padding-bottom: 10px;
+}
+
+.service-card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 15px;
+}
+
+/* --- NOVOS ESTILOS - PÁGINA DE CONTATO --- */
+.contact-info {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+.contact-info p {
+    margin: 15px 0;
+}
+.map-container {
+  border: 3px solid #ffcc00;
+  border-radius: 8px;
+  overflow: hidden; /* Garante que o mapa fique dentro da borda */
+  }
+
+/* --- NOVOS ESTILOS - PÁGINA SOBRE --- */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Coluna da imagem menor, coluna do texto maior */
+  gap: 40px; /* Espaço entre a imagem e o texto */
+  align-items: center; /* Alinha verticalmente o conteúdo */
+  text-align: left;
+  margin-top: 40px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Borda arredondada na imagem */
+  border: 3px solid #ffcc00;
+}
+
+.about-text h3 {
+  color: #ffcc00;
+  font-size: 1.8rem;
+}
+
+/* Deixa a imagem em cima do texto em telas pequenas (celulares) */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr; /* Uma única coluna */
+    text-align: center;
+  }
+  .about-image {
+      margin-bottom: 20px;
+  }
+}
