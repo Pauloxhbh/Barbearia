@@ -257,3 +257,25 @@ footer {
   color: #ffcc00;
   margin-bottom: 10px;
 }
+
+
+/* --- NOVOS ESTILOS PARA CARDS DE SERVIÇO COM IMAGEM --- */
+.service-card img {
+  width: 100%;
+  height: 180px; /* Altura fixa para todas as imagens */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.service-card .card-content {
+  padding: 20px;
+}
+
+/* Ajuste no card antigo para o novo layout */
+.service-card {
+  padding: 0; /* Remove o padding antigo para a imagem encostar na borda */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
