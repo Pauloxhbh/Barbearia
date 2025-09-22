@@ -200,9 +200,22 @@ footer {
     grid-template-columns: 1fr; /* Uma única coluna */
     text-align: center;
   }
-  .about-image {
-      margin-bottom: 20px;
-  }
+  /* Correção para deixar a imagem de perfil circular */
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
+}
+
+/* E adicione este NOVO seletor para o container da imagem */
+.about-image {
+  width: 250px; /* Tamanho do círculo */
+  height: 250px; /* Tamanho do círculo */
+  border-radius: 50%; /* A mágica do círculo acontece aqui */
+  border: 4px solid #ffcc00;
+  overflow: hidden; /* Esconde as partes da imagem que saem do círculo */
+  margin: 0 auto 20px auto; /* Centraliza o círculo */
+}
 }
 
 /* --- ESTILOS PARA MODERNIZAR O INDEX --- */
