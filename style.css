@@ -175,8 +175,10 @@ footer {
 .about-image img {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Borda arredondada na imagem */
   border: 3px solid #ffcc00;
+  border-radius: 50%; /* <-- A MÁGICA ACONTECE AQUI */
+  object-fit: cover;     /* Garante que a imagem preencha o círculo sem distorcer */
+  aspect-ratio: 1 / 1;   /* Força a imagem a ser um quadrado perfeito para o círculo */
 }
 
 .about-text h3 {
