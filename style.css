@@ -53,7 +53,7 @@ footer {
   background: #111;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 0; /* Ajustado para o novo layout do index */
   border-top: 3px solid #ffcc00;
 }
 
@@ -93,34 +93,101 @@ footer {
 }
 
 
-/* --- PÁGINA INICIAL (NOVO DESIGN ELEGANTE) --- */
+/* --- PÁGINA INICIAL (NOVO DESIGN MODERNO E LIMPO) --- */
 .hero {
-  padding: 60px 20px;
-  text-align: left;
-}
-
-.hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  background: #111;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.hero-text h2 {
+.hero h2 {
   font-size: 3.5rem;
+  color: #ffcc00;
   margin-bottom: 20px;
+  max-width: 800px;
   line-height: 1.2;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+.info-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #1e1e1e; /* Fundo mais escuro para um look coeso */
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.info-section h3 {
+  color: #ffcc00;
+  font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
-.hero-image img {
-  width: 100%;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.info-item {
+  background-color: #2a2a2a;
+  padding: 30px;
   border-radius: 8px;
-  border: 3px solid #ffcc00;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+.info-item .icon {
+  font-size: 3.5rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.info-item h4 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.info-item p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.call-to-action {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1596707833005-7f3002242b5d?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.call-to-action h3 {
+  font-size: 3rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -137,10 +204,11 @@ footer {
   border: 1px solid #444;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 0; /* Padding removido para a imagem encostar na borda */
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden; /* Garante que a imagem não vaze */
 }
 
 .service-card:hover {
@@ -152,8 +220,6 @@ footer {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
 
 .service-card .card-content {
@@ -192,7 +258,7 @@ footer {
   border: 4px solid #ffcc00;
   overflow: hidden;
   margin: 0 auto 20px auto;
-  background-color: #2a2a2a; /* <-- CORREÇÃO DA IMAGEM "BUGADA" */
+  background-color: #2a2a2a;
 }
 
 .about-image img {
@@ -226,18 +292,27 @@ footer {
 
 /* --- AJUSTES PARA CELULAR (RESPONSIVIDADE) --- */
 @media (max-width: 768px) {
-  /* Ajusta o layout do Index */
-  .hero-content {
-    grid-template-columns: 1fr;
+  /* Ajustes do Index */
+  .hero h2 {
+    font-size: 2.5rem;
   }
-  .hero-text h2 {
-    font-size: 2.8rem;
+  .hero p {
+    font-size: 1.1rem;
   }
-  .hero-image {
-    display: none; /* Esconde a imagem para focar no texto */
+  .info-section h3 {
+    font-size: 2rem;
   }
-  .hero {
-    text-align: center;
+  .info-item h4 {
+    font-size: 1.5rem;
+  }
+  .info-item .icon {
+    font-size: 3rem;
+  }
+  .call-to-action h3 {
+    font-size: 2.5rem;
+  }
+  .call-to-action p {
+    font-size: 1.1rem;
   }
 
   /* Ajusta o layout do Sobre */
